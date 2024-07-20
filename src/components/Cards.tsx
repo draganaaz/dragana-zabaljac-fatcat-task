@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+
 import { Button } from '@homework-task/components/Button';
 
 type Card = {

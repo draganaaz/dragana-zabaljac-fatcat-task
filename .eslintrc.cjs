@@ -18,9 +18,11 @@ const config = {
         'prettier',
     ],
     ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.js'],
-    settings: { react: { version: '18.2' } },
-    'import/resolver': {
-        typescript: {}, // leverage TS config dorectly to resolve paths
+    settings: {
+        react: { version: '18.2' },
+        'import/resolver': {
+            typescript: {}, // leverage TS config directly to resolve paths
+        },
     },
     parser: '@typescript-eslint/parser',
     plugins: [
@@ -83,7 +85,7 @@ const config = {
                     caseInsensitive: true,
                 },
             },
-        ],
+        ]
     },
 };
 

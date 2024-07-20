@@ -1,7 +1,8 @@
 import React from 'react';
 
-import App from '@homework-task/App';
 import ReactDOM from 'react-dom/client';
+
+import App from '@homework-task/App';
 
 const rootElement = document.getElementById('root');
 
