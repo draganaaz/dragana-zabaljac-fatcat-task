@@ -1,4 +1,13 @@
-export const ItemsShowcase = ({ items }) => {
+type Item = {
+    title: string;
+    description: string;
+};
+
+type ItemsShowcaseProps = {
+    items: Item[];
+};
+
+export const ItemsShowcase = ({ items }: ItemsShowcaseProps) => {
     return (
         <div className="flex justify-center items-center">
             <div className="grid grid-cols-2 gap-8 w-8/12">

@@ -1,6 +1,14 @@
+import { ReactNode, MouseEventHandler } from 'react';
+
 import clsx from 'clsx';
 
-export const Button = ({ children, onClick, className }) => {
+type ButtonProps = {
+    children: ReactNode;
+    onClick: MouseEventHandler<HTMLButtonElement>;
+    className?: string;
+};
+
+export const Button = ({ children, onClick, className }: ButtonProps) => {
     return (
         <button
             className={clsx(
