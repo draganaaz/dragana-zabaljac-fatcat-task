@@ -43,7 +43,7 @@ export const List = <T,>({
                 <p className="text-center">{errorMessage}</p>
             ) : (
                 <ul className="space-y-4">
-                    {items.map((item) => renderItem(item))}
+                    {items?.map((item) => renderItem(item))}
                 </ul>
             )}
         </div>
