@@ -7,28 +7,25 @@ import { postValidation } from '@homework-task/helpers/validationHelper';
 
 type FormData = z.infer<typeof postValidation>;
 
+const getPosts = async (data: FormData) => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+        throw new Error('An error occured while trying to fetch posts.');
+    }
+
+    return response.json();
+};
+
 export const PostForm = () => {
     const successMessage = 'Form submitted successfully!';
     const errorMessage = 'An error occurred. Please try again later.';
-
-    const getPosts = async (data: FormData) => {
-        const response = await fetch(
-            'https://jsonplaceholder.typicode.com/posts',
-            {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            }
-        );
-
-        if (!response.ok) {
-            throw new Error('An error occured while trying to fetch posts.');
-        }
-
-        return response.json();
-    };
 
     const renderForm = (
         register: UseFormRegister<FormData>,
