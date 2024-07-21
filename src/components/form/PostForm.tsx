@@ -7,7 +7,7 @@ import { postValidation } from '@homework-task/helpers/validationHelper';
 
 type FormData = z.infer<typeof postValidation>;
 
-const getPosts = async (data: FormData) => {
+const savePost = async (data: FormData) => {
     const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
         headers: {
@@ -17,7 +17,7 @@ const getPosts = async (data: FormData) => {
     });
 
     if (!response.ok) {
-        throw new Error('An error occured while trying to fetch posts.');
+        throw new Error('Response failed. ');
     }
 
     return response.json();
@@ -91,7 +91,7 @@ export const PostForm = () => {
 
             <FormGenerator<FormData>
                 validationSchema={postValidation}
-                apiHook={getPosts}
+                apiHook={savePost}
                 renderForm={({ register, errors }) =>
                     renderForm(register, errors)
                 }
