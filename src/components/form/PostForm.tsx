@@ -35,11 +35,8 @@ export const PostForm = () => {
         errors: FieldErrors<FormData>
     ) => (
         <>
-            <div className="mb-4">
-                <label
-                    htmlFor="title"
-                    className="block text-sm font-medium text-gray-700"
-                >
+            <div>
+                <label htmlFor="title" className="text-sm font-medium">
                     Title
                 </label>
                 <input
@@ -63,10 +60,7 @@ export const PostForm = () => {
                 )}
             </div>
             <div className="mb-4">
-                <label
-                    htmlFor="body"
-                    className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor="body" className="text-sm font-medium ">
                     Body
                 </label>
                 <textarea
@@ -93,8 +87,8 @@ export const PostForm = () => {
     );
 
     return (
-        <div className="p-6 max-w-lg mx-auto bg-white rounded-lg shadow-md">
-            <h2 className="text-3xl font-bold mb-6 text-center text-gray-800">
+        <div className="p-6 max-w-lg mx-auto my-6 bg-white rounded-lg shadow-lg">
+            <h2 className="text-3xl font-bold mb-6 text-center">
                 Add New Post
             </h2>
 

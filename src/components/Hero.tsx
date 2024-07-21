@@ -1,7 +1,4 @@
-type HeroProps = {
-    title: string;
-    image: string;
-};
+import { HeroProps } from '@homework-task/types/props';
 
 export const Hero = ({ title, image }: HeroProps) => {
     return (

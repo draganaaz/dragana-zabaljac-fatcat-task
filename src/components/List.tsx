@@ -1,11 +1,7 @@
-import { ReactElement, ReactNode, useEffect, useState } from 'react';
+import { ReactElement, useEffect, useState } from 'react';
 
 import { Loader } from '@homework-task/components/Loader';
-
-interface ListProps<T> {
-    apiURL: string;
-    renderItem: (item: T) => ReactNode;
-}
+import { ListProps } from '@homework-task/types/props';
 
 export const List = <T,>({
     apiURL,

@@ -1,15 +1,12 @@
-import { PostForm } from '@homework-task/components/form/PostForm';
-import { Landing } from '@homework-task/components/landing/Landing';
-import { UserList } from '@homework-task/components/UserList';
-
 import './styles.css';
+import { PageGenerator } from '@homework-task/components/pages/PageGenerator';
+
+import { page } from './data/pageGenerator';
 
 function App() {
     return (
         <main>
-            <Landing />
-            <UserList />
-            <PostForm />
+            <PageGenerator data={page} />
         </main>
     );
 }

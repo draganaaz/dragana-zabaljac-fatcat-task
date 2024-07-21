@@ -1,11 +1,4 @@
-type Item = {
-    title: string;
-    description: string;
-};
-
-type ItemsShowcaseProps = {
-    items: Item[];
-};
+import { ItemsShowcaseProps } from '@homework-task/types/props';
 
 export const ItemsShowcase = ({ items }: ItemsShowcaseProps) => {
     return (

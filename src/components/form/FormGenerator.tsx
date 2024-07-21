@@ -103,9 +103,7 @@ const FormGenerator = <T extends FieldValues>({
                     errors,
                 })}
 
-                {mutation.isError && (
-                    <p className="text-red-500">{errorMessage}</p>
-                )}
+                {mutation.isError && <p className="text-red">{errorMessage}</p>}
 
                 <div className="flex items-center justify-center mt-4">
                     <button

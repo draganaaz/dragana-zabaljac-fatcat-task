@@ -1,14 +1,6 @@
 import clsx from 'clsx';
 
-type Item = {
-    title: string;
-    description: string;
-    image: string;
-};
-
-type PanelShowcaseProps = {
-    items: Item[];
-};
+import { PanelShowcaseProps } from '@homework-task/types/props';
 
 export const PanelShowcase = ({ items }: PanelShowcaseProps) => {
     return (

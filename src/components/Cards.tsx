@@ -1,19 +1,7 @@
 import clsx from 'clsx';
 
 import { Button } from '@homework-task/components/Button';
-
-type Card = {
-    title: string;
-    image: string;
-    description: string;
-    background: string;
-    onClick: () => void;
-    buttonText: string;
-};
-
-type CardsProps = {
-    cards: Card[];
-};
+import { CardsProps } from '@homework-task/types/props';
 
 export const Cards = ({ cards }: CardsProps) => {
     return (
